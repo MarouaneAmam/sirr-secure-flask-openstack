@@ -7,5 +7,4 @@ COPY app/ ./app/
 USER appuser
 EXPOSE 8000
 ENV APP_ENV=dev
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "2", "--threads", "1", "app.wsgi:application"] 
-
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "2", "--threads", "1", "app.wsgi:application"]
